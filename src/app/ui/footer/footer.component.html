@@ -1,0 +1,8 @@
+<mat-toolbar *ngIf="images" style="position:absolute; bottom:0px;">
+    <small>Created by: </small>Abdul Aleem Khan
+    <span class="example-fill-remaining-space"></span>
+    <mat-paginator [length]="images.length"
+        [pageSize]="pageSize"
+        (page)="goToPage($event);">
+    </mat-paginator>
+</mat-toolbar>

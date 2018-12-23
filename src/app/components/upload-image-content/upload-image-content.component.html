@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>Upload Images</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>Drag and drop images to the area below</h3>
+  <file-drop 
+    headertext="Drop files here" 
+    (onFileDrop)="dropped($event)" 
+    (onFileOver)="fileOver($event)" 
+    (onFileLeave)="fileLeave($event)" 
+    customstyle="upload-image">
+  </file-drop>
+
+  <mat-grid-list cols="4" rowHeight="150" *ngIf="base64.length>0">
+    <mat-grid-tile
+        *ngFor="let imgSrc of base64"
+        [colspan]="1"
+        [rowspan]="1">
+        <div [ngStyle]="{'height':'120px', 'width':'100%', 'background': 'url('+imgSrc+')', 'background-size':'cover'}"></div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-stroked-button mat-dialog-close>Close</button>
+  <button (click)="saveImages()" mat-dialog-close mat-raised-button color="accent" *ngIf="base64.length>0">{{base64.length >1 ? 'Save Images' : 'Save Image'}}</button>
+</mat-dialog-actions>

@@ -1,0 +1,13 @@
+.image-slider{
+    height:500px;
+    width:750px;
+    max-height: 500px;
+}
+
+.slider-image{
+    height:500px;
+    width:750px;
+    background-size:contain;
+    background-position : center;
+    background-repeat: no-repeat;
+}

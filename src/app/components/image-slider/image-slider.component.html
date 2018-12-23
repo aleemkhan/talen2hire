@@ -1,0 +1,14 @@
+<mat-dialog-content class="image-slider">
+  <div class="slider-image" [ngStyle]="{'background-image': 'url('+images[image].base64+')'}"></div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button (click)="deleteImage(image)" mat-icon-button color="warn" matTooltip="Delete Image" [matTooltipPosition]="'above'">
+    <mat-icon>delete</mat-icon>
+  </button>
+  <button (click)="previousImage()" mat-icon-button matTooltip="Previous Image" [matTooltipPosition]="'above'">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+  </button>
+  <button (click)="nextImage()" mat-icon-button matTooltip="Next Image" [matTooltipPosition]="'above'">
+    <mat-icon>keyboard_arrow_right</mat-icon>
+  </button>
+</mat-dialog-actions>

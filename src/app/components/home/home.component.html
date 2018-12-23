@@ -1,0 +1,6 @@
+<app-layout [images]="images" *ngIf="images">
+    <app-upload-image (reload)="reload($event)" style="position:absolute; z-index: 10; top:5px; right:20px;"></app-upload-image>
+    <app-gallery (slider)="openSlider($event)" [images]="images"></app-gallery>
+</app-layout>
+    
+    

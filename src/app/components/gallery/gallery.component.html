@@ -1,0 +1,14 @@
+<mat-grid-list cols="6" rowHeight="3:4" *ngIf="images.length>0" style="width:100%;">
+  <ng-container *ngFor="let image of images; let i=index;">
+    <mat-grid-tile
+        *ngIf="pageSize*params.pageId > i && i>=pageSize*params.pageId - pageSize" 
+        [colspan]="1"
+        [rowspan]="1"
+        (click)="openSlider(i)"
+        >
+        <app-image-card [image]="image"></app-image-card>
+        <!--div [ngStyle]="{'height':'120px', 'width':'100%', 'background': 'url('+image.base64+')', 'background-size':'cover'}"></div-->
+    </mat-grid-tile>
+  </ng-container>
+</mat-grid-list>
+<mat-card *ngIf="images.length==0">No images found.</mat-card>

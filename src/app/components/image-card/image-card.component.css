@@ -1,0 +1,13 @@
+.image-card{
+    margin:4px;
+    cursor: pointer;
+}
+
+.card-image{
+    height:200px;
+    width:100%;
+    background-size:contain;
+    background-position : center;
+    background-repeat: no-repeat; 
+    margin-bottom: 4px;
+}

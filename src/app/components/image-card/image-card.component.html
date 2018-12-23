@@ -1,0 +1,4 @@
+<mat-card class="image-card">
+  <div class="card-image" [ngStyle]="{'background-image': 'url('+image.base64+')'}"></div>
+  <mat-card-subtitle>{{image.added_at | date: 'shortTime'}} <br> {{image.added_at | date:'fullDate'}}</mat-card-subtitle>
+</mat-card>
